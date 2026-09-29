@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Hibonite</title>
+<link rel="icon" href="assets/images/logo/mark-white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Unbounded:wght@600;700&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+<div class="loader" aria-hidden="true"><img src="assets/images/logo/mark-white.png" alt=""></div>
+<div class="progress" id="progress"></div>
+
+<header class="bar">
+  <a class="brand" href="#store" aria-label="Hibonite home"><img src="assets/images/logo/logo-white.png" alt="Hibonite"></a>
+  <nav class="tabs" aria-label="Primary">
+    <a href="#store" class="on">Store</a><a href="#library">Library</a><a href="#concepts">Concepts</a><a href="#profile">Profile</a>
+    <span class="tabs__ink"></span>
+  </nav>
+  <div class="bar__end"><span class="wallet">$24.50</span>
+    <a class="avatar facet" href="#profile" aria-label="Profile" style="--cut:8px"><img src="assets/images/logo/mark-white.png" alt=""></a></div>
+</header>
+
+<main>
+  <section id="store" class="view">
+    <article class="hero facet" style="--h:12">
+      <i class="shard s1"></i><i class="shard s2"></i><i class="shard s3"></i>
+      <div class="hero__copy">
+        <h1>Ashfall Protocol</h1>
+        <p class="lede">Survive the last eruption cycle in a cooperative action game for one to four players.</p>
+        <div class="hero__cta"><button class="btn btn--main" data-magnet>Buy $29.99</button><button class="btn" data-magnet>Add to wishlist</button></div>
+      </div>
+    </article>
+    <div class="tools">
+      <div class="chips" id="chips" role="group" aria-label="Genre"></div>
+      <input class="search" id="q" type="search" placeholder="Search the store" aria-label="Search the store">
+    </div>
+    <ul class="grid" id="storeGrid"></ul>
+    <p class="empty" id="empty" hidden>Nothing matches. Clear the search or pick another genre.</p>
+  </section>
+
+  <section id="library" class="view">
+    <h2>Library</h2>
+    <ul class="list" id="libList"></ul>
+  </section>
+
+  <section id="concepts" class="view">
+    <h2>Concepts</h2>
+    <ul class="grid slots" id="conceptGrid"></ul>
+  </section>
+
+  <section id="profile" class="view">
+    <h2>Profile</h2>
+    <div class="profile">
+      <div class="card facet id" data-tilt><img class="id__mark" src="assets/images/logo/mark-white.png" alt=""><h3>Player One</h3><p>Member since 2024</p></div>
+      <div class="stats" data-reveal>
+        <div><b data-count="4">0</b><span>Games owned</span></div>
+        <div><b data-count="109">0</b><span>Hours played</span></div>
+        <div><b data-count="37">0</b><span>Achievements</span></div>
+        <div><b data-count="12">0</b><span>Friends</span></div>
+      </div>
+      <div class="week facet" data-reveal style="--cut:24px"><h3>Hours this week</h3>
+        <div class="bars"><div><i style="--i:0;--v:.4"></i>Mon</div><div><i style="--i:1;--v:.7"></i>Tue</div><div><i style="--i:2;--v:.3"></i>Wed</div><div><i style="--i:3;--v:.9"></i>Thu</div><div><i style="--i:4;--v:.55"></i>Fri</div><div><i style="--i:5;--v:1"></i>Sat</div><div><i style="--i:6;--v:.65"></i>Sun</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script defer src="js/data/games.js"></script>
+<script defer src="js/data/concepts.js"></script>
+<script defer src="js/modules/cursor.js"></script>
+<script defer src="js/modules/store.js"></script>
+<script defer src="js/modules/library.js"></script>
+<script defer src="js/modules/concepts.js"></script>
+<script defer src="js/modules/reveal.js"></script>
+<script defer src="js/modules/tilt.js"></script>
+<script defer src="js/modules/nav.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+</html>
